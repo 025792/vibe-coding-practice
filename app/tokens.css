@@ -1,0 +1,92 @@
+/*
+  LifeDNA 디자인 토큰
+  로고 무드: 파스텔 핑크 → 라일락 → 페리윙클 블루로 흐르는 홀로그래픽 글로시 젤리 질감.
+  가드레일: 파스텔은 배경·강조·오브에만. 본문 글자는 진한 플럼으로 대비를 확보한다.
+  이 파일의 변수만 화면 전체에서 사용한다 (하드코딩된 색상 금지).
+*/
+
+:root {
+  /* 시그니처 그라데이션 — 로고 실측 색상 기반, 핑크가 과하게 진하지 않도록 톤을 낮춤 */
+  --grad-main: linear-gradient(135deg, #f5b8e6 0%, #d1aeef 48%, #aebdf5 100%);
+
+  /* 액센트 (배경·강조·오브 전용) */
+  --accent-pink: #f0b3e0;
+  --accent-lilac: #cdaded;
+  --accent-periwinkle: #aebdf5;
+
+  /* 뉴트럴 — 거의 흰빛에 가까운 베이스, 컬러는 코너에만 은은히 */
+  --bg: #fbf7fd;
+  --bg-grad: linear-gradient(160deg, #fbf7fd, #f3f0fb);
+  --card: #ffffff;
+  --card-alpha: rgba(255, 255, 255, 0.72);
+  --line: #ece4f5;
+  --highlight-top: rgba(255, 255, 255, 0.75);
+
+  /* 텍스트 (파스텔 위에서도 AA 대비 확보) */
+  --text: #3a2e5c;
+  --text-soft: #5c5380;
+  --text-on-accent: #ffffff;
+
+  /* 시맨틱 */
+  --success: #29875f;
+  --success-bg: #e3f6f0;
+  --warning: #b06a12;
+  --warning-bg: #fbf0e0;
+  --danger: #c6383f;
+  --danger-bg: #fbe9ea;
+
+  /* 형태 */
+  --radius-lg: 28px;
+  --radius-md: 22px;
+  --radius-sm: 14px;
+  --shadow-soft: 0 20px 50px rgba(150, 120, 200, 0.14);
+  --shadow-glow: 0 18px 44px rgba(196, 166, 236, 0.38);
+
+  /* 스페이싱 스케일 (4의 배수 — 전 화면 공통) */
+  --space-1: 8px;
+  --space-2: 12px;
+  --space-3: 16px;
+  --space-4: 20px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 80px;
+
+  /* 타이포 스케일 */
+  --font-sans: "Pretendard", "IBM Plex Sans KR", ui-sans-serif, system-ui,
+    -apple-system, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  --text-display: 40px;
+  --text-h2: 28px;
+  --text-h3: 20px;
+  --text-body: 15px;
+  --text-meta: 13px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --grad-main: linear-gradient(135deg, #ffabe6 0%, #d8b8ff 48%, #bccbff 100%);
+    --accent-pink: #ffabe6;
+    --accent-lilac: #d8b8ff;
+    --accent-periwinkle: #bccbff;
+
+    --bg: #14101f;
+    --bg-grad: linear-gradient(160deg, #17111f, #131226);
+    --card: #1e1830;
+    --card-alpha: rgba(30, 24, 48, 0.68);
+    --line: rgba(255, 255, 255, 0.09);
+    --highlight-top: rgba(255, 255, 255, 0.12);
+
+    --text: #efeafa;
+    --text-soft: #beb4dd;
+
+    --success: #59d6ac;
+    --success-bg: rgba(61, 190, 154, 0.16);
+    --warning: #f3b46e;
+    --warning-bg: rgba(233, 162, 76, 0.16);
+    --danger: #f18b8f;
+    --danger-bg: rgba(226, 88, 90, 0.16);
+
+    --shadow-soft: 0 20px 50px rgba(0, 0, 0, 0.45);
+    --shadow-glow: 0 18px 50px rgba(210, 175, 255, 0.28);
+  }
+}
